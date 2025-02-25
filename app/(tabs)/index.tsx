@@ -1,9 +1,10 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Platform, View } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Image } from 'expo-image';
 
 export default function HomeScreen() {
   return (
@@ -14,8 +15,15 @@ export default function HomeScreen() {
           source={require('@/assets/images/partial-react-logo.png')}
           style={styles.reactLogo}
         />
-      }>
+      }>      
+      <Image
+        source={{
+          uri: `https://github.com/user-attachments/assets/1e917183-589f-45d8-bc7a-c3da417931d6`,
+        }}
+        style={StyleSheet.absoluteFill}
+      />
       <ThemedView style={styles.titleContainer}>
+
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
       </ThemedView>
